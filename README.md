@@ -12,13 +12,20 @@ Note that the gradle files in the project were small edits from:
     mkdir sdk
     wget https://dl.google.com/android/repository/sdk-tools-darwin-4333796.zip
     unzip sdk-tools-darwin-4333796.zip -d sdk
+
+Point to this sdk using
+
     export ANDROID_HOME=`pwd`/sdk
+
+or add a file `local.properties` with a setting for `sdk.dir`.
 
 # Platform
 
 Download platform-25_r03.zip into sdk/platforms/android-25
 
     ./sdk/tools/bin/sdkmanager --install "platforms;android-25"
+
+or let the gradle script download the platform sdk for you.
 
 # Build
 
